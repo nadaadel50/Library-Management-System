@@ -1,0 +1,197 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B74E9092-9C4F-4974-87A6-05D299A7EA63}|librarysystem.csproj|c:\\users\\dell\\desktop\\last\\librarysystembase\\librarysystem\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B74E9092-9C4F-4974-87A6-05D299A7EA63}|librarysystem.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B74E9092-9C4F-4974-87A6-05D299A7EA63}|librarysystem.csproj|C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\Borrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B74E9092-9C4F-4974-87A6-05D299A7EA63}|librarysystem.csproj|solutionrelative:Borrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B74E9092-9C4F-4974-87A6-05D299A7EA63}|librarysystem.csproj|C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B74E9092-9C4F-4974-87A6-05D299A7EA63}|librarysystem.csproj|solutionrelative:form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B74E9092-9C4F-4974-87A6-05D299A7EA63}|librarysystem.csproj|C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\admin_control.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B74E9092-9C4F-4974-87A6-05D299A7EA63}|librarysystem.csproj|solutionrelative:admin_control.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B74E9092-9C4F-4974-87A6-05D299A7EA63}|librarysystem.csproj|C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\admin_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B74E9092-9C4F-4974-87A6-05D299A7EA63}|librarysystem.csproj|solutionrelative:admin_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B74E9092-9C4F-4974-87A6-05D299A7EA63}|librarysystem.csproj|C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\form4.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B74E9092-9C4F-4974-87A6-05D299A7EA63}|librarysystem.csproj|solutionrelative:form4.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B74E9092-9C4F-4974-87A6-05D299A7EA63}|librarysystem.csproj|C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\form3.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B74E9092-9C4F-4974-87A6-05D299A7EA63}|librarysystem.csproj|solutionrelative:form3.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B74E9092-9C4F-4974-87A6-05D299A7EA63}|librarysystem.csproj|C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B74E9092-9C4F-4974-87A6-05D299A7EA63}|librarysystem.csproj|solutionrelative:form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B74E9092-9C4F-4974-87A6-05D299A7EA63}|librarysystem.csproj|C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B74E9092-9C4F-4974-87A6-05D299A7EA63}|librarysystem.csproj|solutionrelative:form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B74E9092-9C4F-4974-87A6-05D299A7EA63}|librarysystem.csproj|C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B74E9092-9C4F-4974-87A6-05D299A7EA63}|librarysystem.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B74E9092-9C4F-4974-87A6-05D299A7EA63}|librarysystem.csproj|C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B74E9092-9C4F-4974-87A6-05D299A7EA63}|librarysystem.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Admin_Control.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\Admin_Control.Designer.cs",
+              "RelativeDocumentMoniker": "Admin_Control.Designer.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\Admin_Control.Designer.cs",
+              "RelativeToolTip": "Admin_Control.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T20:56:48.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Admin_Control.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\Admin_Control.cs",
+              "RelativeDocumentMoniker": "Admin_Control.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\Admin_Control.cs",
+              "RelativeToolTip": "Admin_Control.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T20:56:45.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form4.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\Form4.Designer.cs",
+              "RelativeDocumentMoniker": "Form4.Designer.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\Form4.Designer.cs",
+              "RelativeToolTip": "Form4.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T20:56:38.73Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form4.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\Form4.cs",
+              "RelativeDocumentMoniker": "Form4.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\Form4.cs",
+              "RelativeToolTip": "Form4.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAA0wDMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T20:56:35.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form3.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\Form3.Designer.cs",
+              "RelativeDocumentMoniker": "Form3.Designer.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\Form3.Designer.cs",
+              "RelativeToolTip": "Form3.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T20:56:31.495Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form3.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\Form3.cs",
+              "RelativeDocumentMoniker": "Form3.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\Form3.cs",
+              "RelativeToolTip": "Form3.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T20:56:28.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Form2.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\Form2.Designer.cs",
+              "RelativeDocumentMoniker": "Form2.Designer.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\Form2.Designer.cs",
+              "RelativeToolTip": "Form2.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T20:56:25.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Borrow.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\Borrow.cs",
+              "RelativeDocumentMoniker": "Borrow.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\Borrow.cs",
+              "RelativeToolTip": "Borrow.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAC0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T20:56:52.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\Form2.cs",
+              "RelativeDocumentMoniker": "Form2.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\Form2.cs",
+              "RelativeToolTip": "Form2.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAswEUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T20:56:22.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\Form1.Designer.cs",
+              "RelativeToolTip": "Form1.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T20:56:18.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\LAST\\librarySystemBASE\\librarysystem\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T20:56:15.177Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

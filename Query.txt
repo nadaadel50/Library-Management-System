@@ -1,0 +1,761 @@
+/*==============================================================*/
+/* DBMS name:      Microsoft SQL Server 2012                    */
+/* Created on:     5/5/2024 5:19:29 PM                          */
+/*==============================================================*/
+
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('ADMIN_PHONE') and o.name = 'FK_ADMIN_PH_HOLDS_AN_ADMIN')
+alter table ADMIN_PHONE
+   drop constraint FK_ADMIN_PH_HOLDS_AN_ADMIN
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('BOOK') and o.name = 'FK_BOOK_HAS_A_PUBLISHE')
+alter table BOOK
+   drop constraint FK_BOOK_HAS_A_PUBLISHE
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('BORROW') and o.name = 'FK_BORROW_RELATIONS_BOOK')
+alter table BORROW
+   drop constraint FK_BORROW_RELATIONS_BOOK
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('BORROW') and o.name = 'FK_BORROW_RELATIONS_STUDENT')
+alter table BORROW
+   drop constraint FK_BORROW_RELATIONS_STUDENT
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('COPIES') and o.name = 'FK_COPIES_HAS_BOOK')
+alter table COPIES
+   drop constraint FK_COPIES_HAS_BOOK
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('EXIST_IN') and o.name = 'FK_EXIST_IN_EXIST_IN_BOOK')
+alter table EXIST_IN
+   drop constraint FK_EXIST_IN_EXIST_IN_BOOK
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('EXIST_IN') and o.name = 'FK_EXIST_IN_EXIST_IN2_LIBRARY_')
+alter table EXIST_IN
+   drop constraint FK_EXIST_IN_EXIST_IN2_LIBRARY_
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('LIBRARY_LOCATION') and o.name = 'FK_LIBRARY__OWN_LIBRARY_')
+alter table LIBRARY_LOCATION
+   drop constraint FK_LIBRARY__OWN_LIBRARY_
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('MANAGE') and o.name = 'FK_MANAGE_MANAGE_BOOK')
+alter table MANAGE
+   drop constraint FK_MANAGE_MANAGE_BOOK
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('MANAGE') and o.name = 'FK_MANAGE_MANAGE2_ADMIN')
+alter table MANAGE
+   drop constraint FK_MANAGE_MANAGE2_ADMIN
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('PUBLISHER_PHONE') and o.name = 'FK_PUBLISHE_HOLDS_PUBLISHE')
+alter table PUBLISHER_PHONE
+   drop constraint FK_PUBLISHE_HOLDS_PUBLISHE
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('"READ"') and o.name = 'FK_READ_READ_BOOK')
+alter table "READ"
+   drop constraint FK_READ_READ_BOOK
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('"READ"') and o.name = 'FK_READ_READ2_STUDENT')
+alter table "READ"
+   drop constraint FK_READ_READ2_STUDENT
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('STUDENT_PHONE') and o.name = 'FK_STUDENT__POSSES_STUDENT')
+alter table STUDENT_PHONE
+   drop constraint FK_STUDENT__POSSES_STUDENT
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('WRITE') and o.name = 'FK_WRITE_WRITE_BOOK')
+alter table WRITE
+   drop constraint FK_WRITE_WRITE_BOOK
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('WRITE') and o.name = 'FK_WRITE_WRITE2_AUTHOR')
+alter table WRITE
+   drop constraint FK_WRITE_WRITE2_AUTHOR
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('ADMIN')
+            and   type = 'U')
+   drop table ADMIN
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('ADMIN_PHONE')
+            and   name  = 'HOLDS_AN_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index ADMIN_PHONE.HOLDS_AN_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('ADMIN_PHONE')
+            and   type = 'U')
+   drop table ADMIN_PHONE
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('AUTHOR')
+            and   type = 'U')
+   drop table AUTHOR
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('BOOK')
+            and   name  = 'HAS_A_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index BOOK.HAS_A_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('BOOK')
+            and   type = 'U')
+   drop table BOOK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('BORROW')
+            and   name  = 'RELATIONSHIP_8_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index BORROW.RELATIONSHIP_8_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('BORROW')
+            and   name  = 'RELATIONSHIP_7_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index BORROW.RELATIONSHIP_7_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('BORROW')
+            and   type = 'U')
+   drop table BORROW
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('COPIES')
+            and   name  = 'HAS_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index COPIES.HAS_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('COPIES')
+            and   type = 'U')
+   drop table COPIES
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('EXIST_IN')
+            and   name  = 'EXIST_IN2_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index EXIST_IN.EXIST_IN2_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('EXIST_IN')
+            and   name  = 'EXIST_IN_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index EXIST_IN.EXIST_IN_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('EXIST_IN')
+            and   type = 'U')
+   drop table EXIST_IN
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('LIBRARY_BRANCH')
+            and   type = 'U')
+   drop table LIBRARY_BRANCH
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('LIBRARY_LOCATION')
+            and   name  = 'OWN_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index LIBRARY_LOCATION.OWN_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('LIBRARY_LOCATION')
+            and   type = 'U')
+   drop table LIBRARY_LOCATION
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('MANAGE')
+            and   name  = 'MANAGE2_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index MANAGE.MANAGE2_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('MANAGE')
+            and   name  = 'MANAGE_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index MANAGE.MANAGE_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('MANAGE')
+            and   type = 'U')
+   drop table MANAGE
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('PUBLISHER')
+            and   type = 'U')
+   drop table PUBLISHER
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('PUBLISHER_PHONE')
+            and   name  = 'HOLDS_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index PUBLISHER_PHONE.HOLDS_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('PUBLISHER_PHONE')
+            and   type = 'U')
+   drop table PUBLISHER_PHONE
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('"READ"')
+            and   name  = 'READ2_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index "READ".READ2_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('"READ"')
+            and   name  = 'READ_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index "READ".READ_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('"READ"')
+            and   type = 'U')
+   drop table "READ"
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('STUDENT')
+            and   type = 'U')
+   drop table STUDENT
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('STUDENT_PHONE')
+            and   name  = 'POSSES_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index STUDENT_PHONE.POSSES_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('STUDENT_PHONE')
+            and   type = 'U')
+   drop table STUDENT_PHONE
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('WRITE')
+            and   name  = 'WRITE2_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index WRITE.WRITE2_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('WRITE')
+            and   name  = 'WRITE_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index WRITE.WRITE_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('WRITE')
+            and   type = 'U')
+   drop table WRITE
+go
+
+/*==============================================================*/
+/* Table: ADMIN                                                 */
+/*==============================================================*/
+create table ADMIN (
+   ADMIN_ID             numeric(5)           not null,
+   A_FNAME              varchar(20)          not null,
+   LAST_NAME            varchar(20)          not null,
+   A_EMAIL              varchar(20)          not null,
+   A_ADDRESS            varchar(20)          not null,
+   constraint PK_ADMIN primary key nonclustered (ADMIN_ID)
+)
+go
+
+/*==============================================================*/
+/* Table: ADMIN_PHONE                                           */
+/*==============================================================*/
+create table ADMIN_PHONE (
+   ADMIN_PHONE          numeric(11)          not null,
+   A_ID                 numeric(5)           not null,
+   ADMIN_ID             numeric(5)           not null,
+   constraint PK_ADMIN_PHONE primary key nonclustered (ADMIN_PHONE, A_ID)
+)
+go
+
+/*==============================================================*/
+/* Index: HOLDS_AN_FK                                           */
+/*==============================================================*/
+create index HOLDS_AN_FK on ADMIN_PHONE (
+ADMIN_ID ASC
+)
+go
+
+/*==============================================================*/
+/* Table: AUTHOR                                                */
+/*==============================================================*/
+create table AUTHOR (
+   AUTHOR_ID            numeric(5)           not null,
+   AUTHOR_NAME          varchar(20)          not null,
+   constraint PK_AUTHOR primary key nonclustered (AUTHOR_ID)
+)
+go
+
+/*==============================================================*/
+/* Table: BOOK                                                  */
+/*==============================================================*/
+create table BOOK (
+   BOOK_ID              numeric(5)           not null,
+   PUBLISHER_ID         numeric(5)           null,
+   BOOK_NAME            varchar(20)          not null,
+   PRICE                int                  not null,
+   CATEGORY             varchar(15)          not null,
+   ISBN                 numeric(4)           not null,
+   PUBLICATION_YEAR     datetime             not null,
+   constraint PK_BOOK primary key nonclustered (BOOK_ID)
+)
+go
+
+/*==============================================================*/
+/* Index: HAS_A_FK                                              */
+/*==============================================================*/
+create index HAS_A_FK on BOOK (
+PUBLISHER_ID ASC
+)
+go
+
+/*==============================================================*/
+/* Table: BORROW                                                */
+/*==============================================================*/
+create table BORROW (
+   BOOK_ID              numeric(5)           not null,
+   STUDENT_ID           numeric(5)           not null,
+   BORROW_DATE          datetime             not null,
+   RETURN_DATE          datetime             not null,
+   constraint PK_BORROW primary key (BOOK_ID, STUDENT_ID)
+)
+go
+
+/*==============================================================*/
+/* Index: RELATIONSHIP_7_FK                                     */
+/*==============================================================*/
+create index RELATIONSHIP_7_FK on BORROW (
+BOOK_ID ASC
+)
+go
+
+/*==============================================================*/
+/* Index: RELATIONSHIP_8_FK                                     */
+/*==============================================================*/
+create index RELATIONSHIP_8_FK on BORROW (
+STUDENT_ID ASC
+)
+go
+
+/*==============================================================*/
+/* Table: COPIES                                                */
+/*==============================================================*/
+create table COPIES (
+   BOOK_ID              numeric(5)           null,
+   NO_OF_COPIES         numeric(5)           not null,
+   AVAILABILITY         varchar(5)           not null
+)
+go
+
+/*==============================================================*/
+/* Index: HAS_FK                                                */
+/*==============================================================*/
+create index HAS_FK on COPIES (
+BOOK_ID ASC
+)
+go
+
+/*==============================================================*/
+/* Table: EXIST_IN                                              */
+/*==============================================================*/
+create table EXIST_IN (
+   BOOK_ID              numeric(5)           not null,
+   BRANCH_ID            numeric(5)           not null,
+   constraint PK_EXIST_IN primary key (BOOK_ID, BRANCH_ID)
+)
+go
+
+/*==============================================================*/
+/* Index: EXIST_IN_FK                                           */
+/*==============================================================*/
+create index EXIST_IN_FK on EXIST_IN (
+BOOK_ID ASC
+)
+go
+
+/*==============================================================*/
+/* Index: EXIST_IN2_FK                                          */
+/*==============================================================*/
+create index EXIST_IN2_FK on EXIST_IN (
+BRANCH_ID ASC
+)
+go
+
+/*==============================================================*/
+/* Table: LIBRARY_BRANCH                                        */
+/*==============================================================*/
+create table LIBRARY_BRANCH (
+   BRANCH_ID            numeric(5)           not null,
+   BRANCH_NAME          varchar(20)          not null,
+   LOCATION             varchar(20)          not null,
+   WORK_HOURS           int                  not null,
+   CONTACT_INFO         numeric(11)          not null,
+   constraint PK_LIBRARY_BRANCH primary key nonclustered (BRANCH_ID)
+)
+go
+
+/*==============================================================*/
+/* Table: LIBRARY_LOCATION                                      */
+/*==============================================================*/
+create table LIBRARY_LOCATION (
+   L_LOCATION           varchar(20)          not null,
+   B_ID                 numeric(5)           not null,
+   BRANCH_ID            numeric(5)           not null,
+   constraint PK_LIBRARY_LOCATION primary key nonclustered (L_LOCATION, B_ID)
+)
+go
+
+/*==============================================================*/
+/* Index: OWN_FK                                                */
+/*==============================================================*/
+create index OWN_FK on LIBRARY_LOCATION (
+BRANCH_ID ASC
+)
+go
+
+/*==============================================================*/
+/* Table: MANAGE                                                */
+/*==============================================================*/
+create table MANAGE (
+   BOOK_ID              numeric(5)           not null,
+   ADMIN_ID             numeric(5)           not null,
+   constraint PK_MANAGE primary key (BOOK_ID, ADMIN_ID)
+)
+go
+
+/*==============================================================*/
+/* Index: MANAGE_FK                                             */
+/*==============================================================*/
+create index MANAGE_FK on MANAGE (
+BOOK_ID ASC
+)
+go
+
+/*==============================================================*/
+/* Index: MANAGE2_FK                                            */
+/*==============================================================*/
+create index MANAGE2_FK on MANAGE (
+ADMIN_ID ASC
+)
+go
+
+/*==============================================================*/
+/* Table: PUBLISHER                                             */
+/*==============================================================*/
+create table PUBLISHER (
+   PUBLISHER_ID         numeric(5)           not null,
+   PUBLISHER_NAME       varchar(20)          not null,
+   constraint PK_PUBLISHER primary key nonclustered (PUBLISHER_ID)
+)
+go
+
+/*==============================================================*/
+/* Table: PUBLISHER_PHONE                                       */
+/*==============================================================*/
+create table PUBLISHER_PHONE (
+   P_PHONE              numeric(11)          not null,
+   P_ID                 numeric(5)           not null,
+   PUBLISHER_ID         numeric(5)           not null,
+   constraint PK_PUBLISHER_PHONE primary key nonclustered (P_PHONE, P_ID)
+)
+go
+
+/*==============================================================*/
+/* Index: HOLDS_FK                                              */
+/*==============================================================*/
+create index HOLDS_FK on PUBLISHER_PHONE (
+PUBLISHER_ID ASC
+)
+go
+
+/*==============================================================*/
+/* Table: "READ"                                                */
+/*==============================================================*/
+create table "READ" (
+   BOOK_ID              numeric(5)           not null,
+   STUDENT_ID           numeric(5)           not null,
+   constraint PK_READ primary key (BOOK_ID, STUDENT_ID)
+)
+go
+
+/*==============================================================*/
+/* Index: READ_FK                                               */
+/*==============================================================*/
+create index READ_FK on "READ" (
+BOOK_ID ASC
+)
+go
+
+/*==============================================================*/
+/* Index: READ2_FK                                              */
+/*==============================================================*/
+create index READ2_FK on "READ" (
+STUDENT_ID ASC
+)
+go
+
+/*==============================================================*/
+/* Table: STUDENT                                               */
+/*==============================================================*/
+create table STUDENT (
+   STUDENT_ID           numeric(5)           not null,
+   A_FNAME              varchar(20)          not null,
+   LNAME                varchar(15)          not null,
+   ADDRESS              varchar(20)          not null,
+   EMAIL                varchar(20)          not null,
+   constraint PK_STUDENT primary key nonclustered (STUDENT_ID)
+)
+go
+
+/*==============================================================*/
+/* Table: STUDENT_PHONE                                         */
+/*==============================================================*/
+create table STUDENT_PHONE (
+   PHONE                numeric(11)          not null,
+   STUDENT_ID           numeric(5)           null,
+   S_ID                 numeric(5)           null,
+   constraint PK_STUDENT_PHONE primary key nonclustered (PHONE)
+)
+go
+
+/*==============================================================*/
+/* Index: POSSES_FK                                             */
+/*==============================================================*/
+create index POSSES_FK on STUDENT_PHONE (
+STUDENT_ID ASC
+)
+go
+
+/*==============================================================*/
+/* Table: WRITE                                                 */
+/*==============================================================*/
+create table WRITE (
+   BOOK_ID              numeric(5)           not null,
+   AUTHOR_ID            numeric(5)           not null,
+   constraint PK_WRITE primary key (BOOK_ID, AUTHOR_ID)
+)
+go
+
+/*==============================================================*/
+/* Index: WRITE_FK                                              */
+/*==============================================================*/
+create index WRITE_FK on WRITE (
+BOOK_ID ASC
+)
+go
+
+/*==============================================================*/
+/* Index: WRITE2_FK                                             */
+/*==============================================================*/
+create index WRITE2_FK on WRITE (
+AUTHOR_ID ASC
+)
+go
+
+alter table ADMIN_PHONE
+   add constraint FK_ADMIN_PH_HOLDS_AN_ADMIN foreign key (ADMIN_ID)
+      references ADMIN (ADMIN_ID)
+go
+
+alter table BOOK
+   add constraint FK_BOOK_HAS_A_PUBLISHE foreign key (PUBLISHER_ID)
+      references PUBLISHER (PUBLISHER_ID)
+go
+
+alter table BORROW
+   add constraint FK_BORROW_RELATIONS_BOOK foreign key (BOOK_ID)
+      references BOOK (BOOK_ID)
+go
+
+alter table BORROW
+   add constraint FK_BORROW_RELATIONS_STUDENT foreign key (STUDENT_ID)
+      references STUDENT (STUDENT_ID)
+go
+
+alter table COPIES
+   add constraint FK_COPIES_HAS_BOOK foreign key (BOOK_ID)
+      references BOOK (BOOK_ID)
+go
+
+alter table EXIST_IN
+   add constraint FK_EXIST_IN_EXIST_IN_BOOK foreign key (BOOK_ID)
+      references BOOK (BOOK_ID)
+go
+
+alter table EXIST_IN
+   add constraint FK_EXIST_IN_EXIST_IN2_LIBRARY_ foreign key (BRANCH_ID)
+      references LIBRARY_BRANCH (BRANCH_ID)
+go
+
+alter table LIBRARY_LOCATION
+   add constraint FK_LIBRARY__OWN_LIBRARY_ foreign key (BRANCH_ID)
+      references LIBRARY_BRANCH (BRANCH_ID)
+go
+
+alter table MANAGE
+   add constraint FK_MANAGE_MANAGE_BOOK foreign key (BOOK_ID)
+      references BOOK (BOOK_ID)
+go
+
+alter table MANAGE
+   add constraint FK_MANAGE_MANAGE2_ADMIN foreign key (ADMIN_ID)
+      references ADMIN (ADMIN_ID)
+go
+
+alter table PUBLISHER_PHONE
+   add constraint FK_PUBLISHE_HOLDS_PUBLISHE foreign key (PUBLISHER_ID)
+      references PUBLISHER (PUBLISHER_ID)
+go
+
+alter table "READ"
+   add constraint FK_READ_READ_BOOK foreign key (BOOK_ID)
+      references BOOK (BOOK_ID)
+go
+
+alter table "READ"
+   add constraint FK_READ_READ2_STUDENT foreign key (STUDENT_ID)
+      references STUDENT (STUDENT_ID)
+go
+
+alter table STUDENT_PHONE
+   add constraint FK_STUDENT__POSSES_STUDENT foreign key (STUDENT_ID)
+      references STUDENT (STUDENT_ID)
+go
+
+alter table WRITE
+   add constraint FK_WRITE_WRITE_BOOK foreign key (BOOK_ID)
+      references BOOK (BOOK_ID)
+go
+
+alter table WRITE
+   add constraint FK_WRITE_WRITE2_AUTHOR foreign key (AUTHOR_ID)
+      references AUTHOR (AUTHOR_ID)
+go
